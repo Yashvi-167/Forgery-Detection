@@ -1,0 +1,7 @@
+split,sp_fake,authentic,total,fake_to_real_ratio
+train,30,30,60,30:30
+train/sd2-sp,30,0,30,
+val,10,10,20,10:10
+val/sd2-sp,10,0,10,
+test,10,10,20,10:10
+test/sd2-sp,10,0,10,

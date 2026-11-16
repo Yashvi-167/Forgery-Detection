@@ -1,0 +1,52 @@
+======================================================================
+  TGIF2 Integration Verification Report
+  TGIF2 root     : D:\tgif2_random
+  ForensicsSAM   : .
+======================================================================
+
+â”€â”€ CHECK 1: Index files exist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] tgif2_random_sp_train.txt: 30 lines
+  [PASS] tgif2_random_sp_val.txt: 10 lines
+  [PASS] tgif2_random_sp_test.txt: 10 lines
+  [PASS] tgif2_random_au_train.txt: 30 lines
+  [PASS] tgif2_random_au_val.txt: 10 lines
+  [PASS] tgif2_random_au_test.txt: 10 lines
+
+â”€â”€ CHECK 2: Image paths exist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] tgif2_random_sp_train.txt: 50/30 sampled â€” all exist
+  [PASS] tgif2_random_sp_val.txt: 50/10 sampled â€” all exist
+  [PASS] tgif2_random_sp_test.txt: 50/10 sampled â€” all exist
+  [PASS] tgif2_random_au_train.txt: 50/30 sampled â€” all exist
+  [PASS] tgif2_random_au_val.txt: 50/10 sampled â€” all exist
+  [PASS] tgif2_random_au_test.txt: 50/10 sampled â€” all exist
+
+â”€â”€ CHECK 3: Mask paths exist (SP files only) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] tgif2_random_sp_train.txt: 50/30 sampled â€” all masks exist
+  [PASS] tgif2_random_sp_val.txt: 50/10 sampled â€” all masks exist
+  [PASS] tgif2_random_sp_test.txt: 50/10 sampled â€” all masks exist
+
+â”€â”€ CHECK 4: Authentic index files have no mask column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] tgif2_random_au_train.txt: all 30 lines have no mask column
+  [PASS] tgif2_random_au_val.txt: all 10 lines have no mask column
+  [PASS] tgif2_random_au_test.txt: all 10 lines have no mask column
+
+â”€â”€ CHECK 5: Image â†” mask dimension match (sample 20 pairs) â”€â”€â”€
+  [PASS] All 20 sampled pairs: dimensions match
+
+â”€â”€ CHECK 6: No cross-split coco_id leakage â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] No cross-split coco_id leakage detected
+
+â”€â”€ CHECK 7: No within-split duplicates â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] train: no duplicate image paths
+  [PASS] val: no duplicate image paths
+  [PASS] test: no duplicate image paths
+
+â”€â”€ CHECK 8: BasicDataloader mini-batch test â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] train BasicDataloader: img=(2, 3, 256, 256) mask=(2, 1, 64, 64) forged_labels=[1, 1]
+
+â”€â”€ CHECK 9: TGIFDataloader mini-batch test (with ai_label) â”€â”€â”€â”€â”€
+  [PASS] train TGIFDataloader: img=(2, 3, 256, 256) forged=[1, 1] ai=[1, 1]
+  [PASS] val TGIFDataloader: img=(2, 3, 256, 256) forged=[1, 1] ai=[1, 1]
+
+â”€â”€ FINAL RESULT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  [PASS] ALL CHECKS PASSED â€” integration is complete and verified.

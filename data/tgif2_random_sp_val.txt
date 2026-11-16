@@ -1,0 +1,10 @@
+D:/tgif2_random/sd2-sp/validation/100060_mask_random.png_sd2_0.png,D:/tgif2_random/masks-sd2/validation/100060_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100061_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100061_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100062_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100062_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100063_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100063_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100064_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100064_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100065_mask_random.png_sd2_0.png,D:/tgif2_random/masks-sd2/validation/100065_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100066_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100066_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100067_mask_random.png_sd2_0.jpg,D:/tgif2_random/masks-sd2/validation/100067_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100068_mask_random.png_sd2_0.png,D:/tgif2_random/masks-sd2/validation/100068_mask_random.png
+D:/tgif2_random/sd2-sp/validation/100069_mask_random.png_sd2_0.png,D:/tgif2_random/masks-sd2/validation/100069_mask_random.png

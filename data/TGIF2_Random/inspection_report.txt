@@ -1,0 +1,96 @@
+======================================================================
+  TGIF2 Random Dataset Inspection Report
+  Root: D:\tgif2_random
+======================================================================
+
+-- Authentic Originals ---------------------------------------------
+  training    :     30 images   e.g. ['100030_orig.png', '100031_orig.png', '100032_orig.png']
+  validation  :     10 images   e.g. ['100070_orig.png', '100071_orig.png', '100072_orig.png']
+  testing     :     10 images   e.g. ['100090_orig.png', '100091_orig.png', '100092_orig.png']
+  TOTAL       :     50
+
+-- SP (Spliced-in-Place) Generators --------------------------------
+
+  Generator: sd2-sp
+    training    :     30 images   e.g. ['100000_mask_random.png_sd2_0.png', '100001_mask_random.png_sd2_0.png']
+    validation  :     10 images   e.g. ['100060_mask_random.png_sd2_0.png', '100061_mask_random.png_sd2_0.png']
+    testing     :     10 images   e.g. ['100080_mask_random.png_sd2_0.png', '100081_mask_random.png_sd2_0.png']
+    Mask folder: masks-sd2/
+      masks/training    :     30   e.g. ['100000_mask_random.png', '100001_mask_random.png']
+      masks/validation  :     10   e.g. ['100060_mask_random.png', '100061_mask_random.png']
+      masks/testing     :     10   e.g. ['100080_mask_random.png', '100081_mask_random.png']
+
+  Generator: flux1schnell-sp
+    training    :      0 images   e.g. []
+    validation  :      0 images   e.g. []
+    testing     :      0 images   e.g. []
+    Mask folder: masks-flux/
+      masks/training    :      0   e.g. []
+      masks/validation  :      0   e.g. []
+      masks/testing     :      0   e.g. []
+
+  Generator: flux1dev-sp
+    training    :      0 images   e.g. []
+    validation  :      0 images   e.g. []
+    testing     :      0 images   e.g. []
+    Mask folder: masks-flux/
+      masks/training    :      0   e.g. []
+      masks/validation  :      0   e.g. []
+      masks/testing     :      0   e.g. []
+
+  Generator: flux1filldev-sp
+    training    :      0 images   e.g. []
+    validation  :      0 images   e.g. []
+    testing     :      0 images   e.g. []
+    Mask folder: masks-flux/
+      masks/training    :      0   e.g. []
+      masks/validation  :      0   e.g. []
+      masks/testing     :      0   e.g. []
+
+  SP TOTAL (all generators + splits): 50
+
+-- FR (Fully Regenerated) Generators -------------------------------
+   (Kept separate — not used for localization training)
+  sd2-fr: NOT FOUND
+  sdxl-fr: NOT FOUND
+  flux1schnell-fr: NOT FOUND
+  flux1dev-fr: NOT FOUND
+  flux1filldev-fr: NOT FOUND
+  FR TOTAL: 0
+
+-- Naming Convention Examples ---------------------------------------
+  sd2-sp/training/
+    100000_mask_random.png_sd2_0.png
+    └- coco_id extracted: 100000
+    └- expected mask    : 100000_mask_random.png
+    100001_mask_random.png_sd2_0.png
+    └- coco_id extracted: 100001
+    └- expected mask    : 100001_mask_random.png
+    100002_mask_random.png_sd2_0.png
+    └- coco_id extracted: 100002
+    └- expected mask    : 100002_mask_random.png
+
+-- Image Dimension Samples -----------------------------------------
+  Unique (H, W) seen in sd2-sp/training: [(512, 512), (565, 565), (640, 1536), (816, 1456), (928, 1312), (1024, 1024), (1344, 896), (1632, 2912), (2048, 2048)]
+
+-- Image ↔ Mask Correspondence Check (up to 100 pairs) -------------
+  Checked : 45
+  Matched : 45
+  Missing : 0
+
+-- Summary ---------------------------------------------------------
+  Authentic originals  :      50
+  SP fake (all gen)    :      50  <- primary localization data
+  FR fake (all gen)    :       0  <- kept separate
+  Mask correspondence  : 45/45 checked pairs matched
+
+  Recommended index files to generate:
+    data/tgif2_random_sp_train.txt   (SP train, with masks)
+    data/tgif2_random_sp_val.txt
+    data/tgif2_random_sp_test.txt
+    data/tgif2_random_au_train.txt   (authentic, no mask column)
+    data/tgif2_random_au_val.txt
+    data/tgif2_random_au_test.txt
+
+  Next step: python integrate_tgif2.py --root <TGIF2_RANDOM_ROOT>
+======================================================================
